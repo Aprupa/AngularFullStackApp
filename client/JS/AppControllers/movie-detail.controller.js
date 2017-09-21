@@ -4,6 +4,7 @@
     angular
         .module('movieFlixApp')
         .controller('MovieDetailController',MovieDetailController);
+
     MovieDetailController.$inject = ['movieService','$routeParams'];
 
     function MovieDetailController(movieService,$routeParams) {
