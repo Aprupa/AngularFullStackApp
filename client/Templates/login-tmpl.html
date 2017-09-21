@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class = "container-fluid">
+        <form novalidate name="loginForm" ng-submit="loginVM.formSubmit()">
+          <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Login</strong>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="userEmail">Email address:</label>
+                        <input type="text" class="form-control" ng-model="loginVM.user.email" id="userEmail" name="userEmail" required>
+                        <div class="error" ng-message = "loginForm.userEmail.$error" ng-if = "loginForm.userEmail.$dirty"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="userPassword">Password:</label>
+                        <input type="password" class="form-control" ng-model = "loginVM.user.password" name="userPassword" id="pwd" minlength="6" required>
+                        <div class = "error" ng-message="loginForm.userPassword.$error" ng-if = "loginForm.userPassword.$dirty">
+                            <p ng-message = "required">Please Enter Password</p>
+                            <p ng-message = "minlength">Password is short, must be atleast 6 characters</p>
+                        </div>
+                    </div>
+                    <div class = "panel-footer">
+                        <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-default">Submit</button>
+                        <a href="#" class="btn btn-default">Create User</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

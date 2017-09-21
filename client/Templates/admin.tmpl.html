@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="#/adminpage" class="btn btn-primary">Go Back Admin Page</a>
+
+<div class="container">
+    <div class="col-md-6 col-lg-offset-3">
+        <form novalidate name="addMovie" ng-submit="adminVM.createMovie()" method="post">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Add Movie</strong>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="Title">Title</label>
+                        <input type="text" class="form-control" ng-model="adminVM.movie.Title" id="Title" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Year">Year</label>
+                        <input type="text" class="form-control" id="Year" ng-model="adminVM.movie.Year" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Rated">Rated</label>
+                        <input type="text" class="form-control" id="Rated" ng-model="adminVM.movie.Rated" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Released">Released</label>
+                        <input type="text" class="form-control" id="Released" ng-model="adminVM.movie.Released" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Runtime">Runtime</label>
+                        <input type="text" class="form-control" id="Runtime" ng-model="adminVM.movie.Runtime" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Genre">Genre</label>
+                        <input type="text" class="form-control" id="Genre" ng-model="adminVM.movie.Genre" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Director">Director</label>
+                        <input type="text" class="form-control" id="Director" ng-model="adminVM.movie.Director" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Writer">Writer</label>
+                        <input type="text" class="form-control" id="Writer" ng-model="adminVM.movie.Writer" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Actors">Actors</label>
+                        <input type="text" class="form-control" id="Actors" ng-model="adminVM.movie.Actors" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Plot">Plot</label>
+                        <input type="text" class="form-control" id="Plot" ng-model="adminVM.movie.Plot" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Language">Language</label>
+                        <input type="text" class="form-control" id="Language" ng-model="adminVM.movie.Language" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Country">Country</label>
+                        <input type="text" class="form-control" id="Country" ng-model="adminVM.movie.Country" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Awards">Awards</label>
+                        <input type="text" class="form-control" id="Awards" ng-model="adminVM.movie.Awards" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Poster">Poster</label>
+                        <input type="text" class="form-control" id="Poster" ng-model="adminVM.movie.Poster" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Metascore">Metascore</label>
+                        <input type="text" class="form-control" id="Metascore" ng-model="adminVM.movie.Metascore" />
+                    </div>
+                    <div class="form-group">
+                        <label for="imdbRating">IMDB Rating</label>
+                        <input type="text" class="form-control" id="imdbRating" ng-model="adminVM.movie.imdbRating" />
+                    </div>
+                    <div class="form-group">
+                        <label for="imdbVotes">IMDB Votes</label>
+                        <input type="text" class="form-control" id="imdbVotes" ng-model="adminVM.movie.imdbVotes" />
+                    </div>
+                    <div class="form-group">
+                        <label for="imdbID">IMDB Id</label>
+                        <input type="text" class="form-control" id="imdbID" ng-model="adminVM.movie.imdbID" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Type">Type</label>
+                        <input type="text" class="form-control" id="Type" ng-model="adminVM.movie.Type" />
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" class="btn btn-primary">Add Movie</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="jumbotron">
+    <h2>Movieflix-The database for movies and tv shows</h2>
+    <p><a class="btn btn-primary btn-lg" href="#/sign-in" role="button">Sign Up</a></p>
+</div>
+<div class="container">
+    <section class="moviebox" ng-repeat="movie in movieVM.movie">
+        <div class="row">
+            <div class="col-md-4">
+                <a ng-href="#/movie/{{movie.id}}"><img ng-src="{{movie.Poster}}" alt="Movie Poster"></a>
+            </div>
+        </div>
+</div>
+</section>
+</div>
+
+</body>
+</html>

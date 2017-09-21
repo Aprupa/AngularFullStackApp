@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <label><h2>Search By</h2></label>
+    <div class="row">
+        <div class="col-md-1">
+            <select class="form-control" ng-model="queryBy" ng-init="queryBy = 'Title'">
+                <option value="$">All</option>
+                <option value="Title" selected>Title</option>
+                <option value="Year">Year</option>
+                <option value="Type">Type</option>
+                <option value="Genre">Genre</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <input type="text" placeholder="Search Here" id="searchBox" class="form-control" ng-model="movieVM.inputText[queryBy]">
+        </div>
+    </div>
+</div>
+<table class="table table-hover table-bordered">
+    <thead>
+    <tr>
+        <th>Click on Image</th>
+        <th ng-click="movieVM.toggleSort('Title')">Title</th>
+        <th ng-click="movieVM.toggleSort('Year')">Year</th>
+        <th ng-click="movieVM.toggleSort('imdbRating')">IMDB Rating</th>
+        <th ng-click="movieVM.toggleSort('Type')">Type</th>
+        <th ng-click="movieVM.toggleSort('Genre')">Genre</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="movie in movieVM.movie | filter: movieVM.inputText | orderBy:movieVM.sorter.by:movieVM.sorter.reverse">
+        <td><a ng-href="#/movielist/{{movie.id}}"><img class="imgthumb" ng-src="{{movie.Poster}}" /></a></td>
+        <td>{{movie.Title}}</td>
+        <td>{{movie.Year}}</td>
+        <td>{{movie.imdbRating}}</td>
+        <td>{{movie.Type}}</td>
+        <td>{{movie.Genre}}</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>Poster</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>IMDB Rating</th>
+        <th>Type</th>
+        <th>Genre</th>
+    </tr>
+    </tfoot>
+</table>
+</div>
+</body>
+</html>

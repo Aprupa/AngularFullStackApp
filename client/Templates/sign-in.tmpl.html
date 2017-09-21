@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <form novalidate name="addNewUser" ng-submit = "signInVM.createUser()" method = "post">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Welcome to Movie Flix, fill out the form below to begin membership</strong>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for = "userFirstName">First Name</label>
+                        <input type="text" class="form-group" ng-model = "signInVM.user.firstName" id="userFirstName" name="firstName" required minlength="2">
+                        <div class="error" ng-messages = "addNewUser.firstName.$error" ng-if = "addNewUser.firstName.$dirty">
+                            <p ng-message = "required"> First Name can't be empty</p>
+                            <p ng-message = "minlength">First name too short, must be at least 2 characters</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for = "userLastName">Last Name</label>
+                        <input type="text" class="form-group" ng-model = "signInVM.user.lastName" id="userLastName" name="lastName" required minlength="2">
+                        <div class="error" ng-messages = "addNewUser.lastName.$error" ng-if = "addNewUser.lastName.$dirty">
+                            <p ng-message = "required"> Last Name can't be empty</p>
+                            <p ng-message = "minlength">Last name too short, must be at least 2 characters</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for = "userEmail">Email ID</label>
+                        <input type="email" class="form-group" ng-model = "signInVM.user.email" id="userEmail" name="userEmail" required>
+                        <div class="error" ng-messages = "addNewUser.userEmail.$error" ng-if = "addNewUser.userEmail.$dirty">
+                            <p ng-message = "required">EMail can't be empty</p>
+                            <p ng-message = "email">Enter EMail in correct format</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for = "userPassword">Password</label>
+                        <input type="password" class="form-group" ng-model = "signInVM.user.userPassword" id="userPassword" name="userPassword" required minlength="6">
+                        <div class="error" ng-messages = "addNewUser.userPassword.$error" ng-if = "addNewUser.userPassword.$dirty">
+                            <p ng-message = "required">Password can't be empty</p>
+                            <p ng-message = "minlength">Password must be at least 6 characters</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" ng-disabled="addUser.$invalid" class="btn btn-primary">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
