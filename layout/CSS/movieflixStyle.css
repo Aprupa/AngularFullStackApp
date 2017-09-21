@@ -1,0 +1,25 @@
+/* Panel Info class */
+.panel-info{
+    width: 100%;
+}
+
+/* Image Tag */
+img{
+    width:220px;
+    height:200px;
+}
+
+/*Movie Class*/
+.movie{
+    float:left;
+    margin: 2% 1%;
+}
+
+/* Footer ID style*/
+
+#footer{
+    float: right;
+    font-family: "Arial Black";
+    font-size: 25px;
+    clear: both;
+}

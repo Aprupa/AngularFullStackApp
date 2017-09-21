@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <h3>{{movieDetailVM.movie.Type | capitalize}} Details</h3>
+    </div>
+    <div>
+        <table class="table table-condensed">
+            <tbody>
+            <tr>
+                <td><strong>Title</strong></td>
+                <td><strong>{{ movieDetailVM.movie.Title }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Year</strong></td>
+                <td><strong>{{ movieDetailV.movie.Year }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Country</strong></td>
+                <td><strong>{{ movieDetailVM.movie.Country }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Language</strong></td>
+                <td><strong>{{ movieDetailVM.movie.Language }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Genre</strong></td>
+                <td><strong>{{ movieDetailVM.movie.Genre }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong>IMDB Rating</strong></td>
+                <td><strong>{{ movieDetailVM.movie.imdbRating }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Released</strong></td>
+                <td><strong>{{ movieDetailVM.movie.Released }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Writer</strong></td>
+                <td><strong>{{ movieDetailVM.movie.Writer }}</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Actors</strong></td>
+                <td><strong>{{ movieDetailVM.movie.Actors }}</strong></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
